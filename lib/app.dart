@@ -9,5 +9,3 @@ Widget createApp() {
     home: new Text('demo'),
   );
 }
-
-// 动态 活动 线路 消息 我的
