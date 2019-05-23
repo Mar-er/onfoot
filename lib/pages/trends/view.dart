@@ -5,5 +5,7 @@ import 'action.dart';
 import 'state.dart';
 
 Widget buildView(TrendsState state, Dispatch dispatch, ViewService viewService) {
-  return Container();
+  return Container(
+    child: Text('current page trends'),
+  );
 }

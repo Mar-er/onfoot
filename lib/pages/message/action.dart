@@ -5,6 +5,7 @@ enum MessageAction { action }
 
 class MessageActionCreator {
   static Action onAction() {
+    print('message action');
     return const Action(MessageAction.action);
   }
 }

@@ -5,6 +5,7 @@ enum TrendsAction { action }
 
 class TrendsActionCreator {
   static Action onAction() {
+    print('trends action');
     return const Action(TrendsAction.action);
   }
 }

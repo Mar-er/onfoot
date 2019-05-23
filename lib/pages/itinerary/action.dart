@@ -5,6 +5,7 @@ enum ItineraryAction { action }
 
 class ItineraryActionCreator {
   static Action onAction() {
+    print('itinerary action');
     return const Action(ItineraryAction.action);
   }
 }

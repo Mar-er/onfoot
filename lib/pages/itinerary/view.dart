@@ -5,5 +5,7 @@ import 'action.dart';
 import 'state.dart';
 
 Widget buildView(ItineraryState state, Dispatch dispatch, ViewService viewService) {
-  return Container();
+  return Container(
+    child: Text('current page itinerary'),
+  );
 }
