@@ -22,12 +22,16 @@ Widget createApp() {
       },
     ),
   ]);
+  print('=============== routes ==================');
+  print(routes);
   return MaterialApp(
     title: 'title',
+    debugShowCheckedModeBanner: false,
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: routes.buildPage(TabRoutePath.activity["name"], null),
+    home: routes.buildPage(TabRoutePath.message["name"], null),
+
     onGenerateRoute: (RouteSettings settings) {
       return MaterialPageRoute(builder: (BuildContext context) {
         print('======= settings =======');

@@ -7,6 +7,7 @@ import 'state.dart';
 import 'package:onfoot/constant/routes.dart';
 
 Effect<TrendsState> buildEffect() {
+  print('trends begin');
   return combineEffects(<Object, Effect<TrendsState>>{
     TrendsAction.action: _onAction,
   });

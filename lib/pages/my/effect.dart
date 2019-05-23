@@ -13,6 +13,6 @@ Effect<MyState> buildEffect() {
 }
 
 void _onAction(Action action, Context<MyState> ctx) {
-  print('=================== effect ${TabRoutePath.trends["name"]} =================');
-  Navigator.of(ctx.context).pushNamed(TabRoutePath.trends["name"]);
+  print('=================== effect ${TabRoutePath.my["name"]} =================');
+  Navigator.of(ctx.context).pushNamed(TabRoutePath.my["name"]);
 }

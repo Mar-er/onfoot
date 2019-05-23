@@ -9,36 +9,38 @@ import 'package:onfoot/pages/itinerary/action.dart';
 import 'package:onfoot/pages/activity/action.dart';
 import 'package:onfoot/pages/my/action.dart';
 
+import 'package:onfoot/constant/routes.dart';
+
 Widget buildView(MessageState state, Dispatch dispatch, ViewService viewService) {
   return Container(
     child: Column(
       children: [
-        Text('current page message'),
+        Text('current page ${TabRoutePath.message["name"]}'),
         FlatButton(
           onPressed: () => dispatch(ActivityActionCreator.onAction()),
-          child: Text('go to trends'),
+          child: Text('go to ${TabRoutePath.activity["name"]}'),
           color: Colors.blue,
         ),
         FlatButton(
           onPressed: () => dispatch(TrendsActionCreator.onAction()),
-          child: Text('go to itinerary'),
+          child: Text('go to ${TabRoutePath.trends["name"]}'),
           color: Colors.blue,
         ),
         FlatButton(
           onPressed: () => dispatch(ItineraryActionCreator.onAction()),
-          child: Text('go to message'),
+          child: Text('go to ${TabRoutePath.itinerary["name"]}'),
           color: Colors.blue,
         ),
         FlatButton(
           onPressed: () => dispatch(MessageActionCreator.onAction()),
-          child: Text('go to my'),
+          child: Text('go to ${TabRoutePath.message["name"]}'),
           color: Colors.blue,
         ),
         FlatButton(
           onPressed: () => dispatch(MyActionCreator.onAction()),
-          child: Text('go to activity'),
+          child: Text('go to ${TabRoutePath.my["name"]}'),
           color: Colors.blue,
-        )
+        ),
       ],
     ),
   );
