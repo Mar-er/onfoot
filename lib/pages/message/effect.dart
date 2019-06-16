@@ -13,5 +13,4 @@ Effect<MessageState> buildEffect() {
 }
 
 void _onAction(Action action, Context<MessageState> ctx) {
-  Navigator.of(ctx.context).pushNamed(TabRoutePath.message["name"]);
 }

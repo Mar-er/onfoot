@@ -11,28 +11,28 @@ Widget buildView(ItineraryState state, Dispatch dispatch, ViewService viewServic
       children: <Widget>[
         Text('current page itinerary'),
         FlatButton(
-          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoutePath.activity["name"], arguments: {"a": 1, "b": 2}),
-          child: Text('go to ${TabRoutePath.activity["name"]}'),
+          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[0]["name"], arguments: {"a": 1, "b": 2}),
+          child: Text('go to ${TabRoute.route[0]["name"]}'),
           color: Colors.blue,
         ),
         FlatButton(
-          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoutePath.trends["name"]),
-          child: Text('go to ${TabRoutePath.trends["name"]}'),
+          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[1]["name"]),
+          child: Text('go to ${TabRoute.route[1]["name"]}'),
           color: Colors.blue,
         ),
         FlatButton(
-          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoutePath.itinerary["name"]),
-          child: Text('go to ${TabRoutePath.itinerary["name"]}'),
+          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[2]["name"]),
+          child: Text('go to ${TabRoute.route[2]["name"]}'),
           color: Colors.blue,
         ),
         FlatButton(
-          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoutePath.message["name"]),
-          child: Text('go to ${TabRoutePath.message["name"]}'),
+          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[3]["name"]),
+          child: Text('go to ${TabRoute.route[3]["name"]}'),
           color: Colors.blue,
         ),
         FlatButton(
-          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoutePath.my["name"]),
-          child: Text('go to ${TabRoutePath.my["name"]}'),
+          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[4]["name"]),
+          child: Text('go to ${TabRoute.route[4]["name"]}'),
           color: Colors.blue,
         ),
       ],

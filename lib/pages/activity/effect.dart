@@ -16,8 +16,6 @@ Effect<ActivityState> buildEffect() {
 }
 
 void _onAction(Action action, Context<ActivityState> ctx) {
-  Navigator.of(ctx.context)
-      .pushNamed(TabRoutePath.activity["name"], arguments: {"a": 1, "b": 2});
 }
 
 void _onChangeTheme(Action action, Context<ActivityState> ctx) {

@@ -13,6 +13,4 @@ Effect<MyState> buildEffect() {
 }
 
 void _onAction(Action action, Context<MyState> ctx) {
-  print('=================== effect ${TabRoutePath.my["name"]} =================');
-  Navigator.of(ctx.context).pushNamed(TabRoutePath.my["name"]);
 }

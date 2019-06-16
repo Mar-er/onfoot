@@ -14,6 +14,4 @@ Effect<TrendsState> buildEffect() {
 }
 
 void _onAction(Action action, Context<TrendsState> ctx) {
-  print('=================== effect ${TabRoutePath.trends["name"]} =================');
-  Navigator.of(ctx.context).pushNamed(TabRoutePath.trends["name"]);
 }
