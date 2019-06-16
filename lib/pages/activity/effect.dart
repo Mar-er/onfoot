@@ -4,24 +4,23 @@ import 'package:flutter/material.dart';
 import 'action.dart';
 import 'state.dart';
 
-import 'package:onfoot/constant/routes.dart';
-
-//import '../activity/page.dart' as activity_page;
+import 'package:onfoot/constants/constants.dart';
+import 'package:onfoot/global_store/store.dart';
+import 'package:onfoot/global_store/action.dart';
 
 Effect<ActivityState> buildEffect() {
   return combineEffects(<Object, Effect<ActivityState>>{
     ActivityAction.action: _onAction,
+    ActivityAction.onChangeTheme: _onChangeTheme,
   });
 }
 
 void _onAction(Action action, Context<ActivityState> ctx) {
-  print(
-      '=================== effect ${TabRoutePath.activity["name"]} =================');
   Navigator.of(ctx.context)
       .pushNamed(TabRoutePath.activity["name"], arguments: {"a": 1, "b": 2});
+}
 
-//  Navigator.of(ctx.context).push(MaterialPageRoute(
-//    builder: (BuildContext buildCtx) =>
-//        activity_page.ActivityPage().buildPage(null),
-//  ));
+void _onChangeTheme(Action action, Context<ActivityState> ctx) {
+  //change global data
+  GlobalStore.store.dispatch(GlobalActionCreator.onchangeThemeColor());
 }

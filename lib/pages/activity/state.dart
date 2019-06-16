@@ -1,11 +1,18 @@
-import 'package:fish_redux/fish_redux.dart';
+import 'dart:ui';
 
-class ActivityState implements Cloneable<ActivityState> {
+import 'package:fish_redux/fish_redux.dart';
+import 'package:onfoot/global_store/state.dart';
+
+class ActivityState implements GlobalBaseState<ActivityState> {
 
   @override
   ActivityState clone() {
-    return ActivityState();
+    return ActivityState()
+      ..themeColor = themeColor;
   }
+
+  @override
+  Color themeColor;
 }
 
 ActivityState initState(Map<String, dynamic> args) {

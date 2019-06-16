@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'action.dart';
 import 'state.dart';
 
-import 'package:onfoot/constant/routes.dart';
+import 'package:onfoot/constants/constants.dart';
 
 Effect<ItineraryState> buildEffect() {
   return combineEffects(<Object, Effect<ItineraryState>>{
