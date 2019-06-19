@@ -4,27 +4,32 @@ class TabRoute {
   static const List<Map<String, dynamic>> route =   [
     {
       // 活动
-      "name": '/activity',
+      "path": "/activity",
+      "name": "活动",
       "icon": Icons.ac_unit,
     },
     {
       // 动态
-      "name": '/trends',
+      "path": "/trends",
+      "name": "动态",
       "icon": Icons.ac_unit,
     },
     {
       // 线路
-      "name": '/itinerary',
+      "path": "/itinerary",
+      "name": "线路",
       "icon": Icons.ac_unit,
     },
     {
       // 消息
-      "name": '/message',
+      "path": "/message",
+      "name": "消息",
       "icon": Icons.ac_unit,
     },
     {
       // 我的
-      "name": '/my',
+      "path": "/my",
+      "name": "我的",
       "icon": Icons.ac_unit,
     }
   ];

@@ -12,7 +12,7 @@ Widget buildView(ActivityState state, Dispatch dispatch, ViewService viewService
     color: state.themeColor,
     child: Column(
       children: [
-        Text('current page ${TabRoute.route[0]["name"]}'),
+        Text('current page ${TabRoute.route[0]["path"]}'),
         RaisedButton(
             padding: const EdgeInsets.only(
                 left: 20.0, top: 10.0, right: 20.0, bottom: 10.0),
@@ -24,28 +24,28 @@ Widget buildView(ActivityState state, Dispatch dispatch, ViewService viewService
               dispatch(ActivityActionCreator.onChangeTheme());
             }),
         FlatButton(
-          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[0]["name"], arguments: {"a": 1, "b": 2}),
-          child: Text('go to ${TabRoute.route[0]["name"]}'),
+          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[0]["path"], arguments: {"a": 1, "b": 2}),
+          child: Text('go to ${TabRoute.route[0]["path"]}'),
           color: Colors.blue,
         ),
          FlatButton(
-           onPressed: () => Router.pushNamed(viewService.context, TabRoute.route[1]["name"]),
-           child: Text('go to ${TabRoute.route[1]["name"]}'),
+           onPressed: () => Router.pushNamed(viewService.context, TabRoute.route[1]["path"]),
+           child: Text('go to ${TabRoute.route[1]["path"]}'),
            color: Colors.blue,
          ),
          FlatButton(
-           onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[2]["name"]),
-           child: Text('go to ${TabRoute.route[2]["name"]}'),
+           onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[2]["path"]),
+           child: Text('go to ${TabRoute.route[2]["path"]}'),
            color: Colors.blue,
          ),
         FlatButton(
-          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[3]["name"]),
-          child: Text('go to ${TabRoute.route[3]["name"]}'),
+          onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[3]["path"]),
+          child: Text('go to ${TabRoute.route[3]["path"]}'),
           color: Colors.blue,
         ),
          FlatButton(
-           onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[4]["name"]),
-           child: Text('go to ${TabRoute.route[4]["name"]}'),
+           onPressed: () => Navigator.of(viewService.context).pushNamed(TabRoute.route[4]["path"]),
+           child: Text('go to ${TabRoute.route[4]["path"]}'),
            color: Colors.blue,
          ),
       ],

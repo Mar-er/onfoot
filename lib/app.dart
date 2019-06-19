@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fish_redux/fish_redux.dart';
 
-import 'package:onfoot/pages/home/page.dart';
+import 'package:onfoot/pages/tabs/tabs.dart';
 import 'package:onfoot/pages/activity/page.dart';
 import 'package:onfoot/pages/trends/page.dart';
 import 'package:onfoot/pages/itinerary/page.dart';
@@ -38,12 +38,12 @@ Widget createApp() {
   final AbstractRoutes routes = HybridRoutes(routes: <AbstractRoutes>[
     PageRoutes(
       pages: <String, Page<Object, dynamic>>{
-        'home': pageConfiguration(HomePage()),
-        TabRoute.route[0]["name"]: pageConfiguration(ActivityPage()),
-        TabRoute.route[1]["name"]: pageConfiguration(TrendsPage()),
-        TabRoute.route[2]["name"]: pageConfiguration(ItineraryPage()),
-        TabRoute.route[3]["name"]: pageConfiguration(MessagePage()),
-        TabRoute.route[4]["name"]: pageConfiguration(MyPage()),
+        'home': pageConfiguration(TabsPage()),
+        TabRoute.route[0]["path"]: pageConfiguration(ActivityPage()),
+        TabRoute.route[1]["path"]: pageConfiguration(TrendsPage()),
+        TabRoute.route[2]["path"]: pageConfiguration(ItineraryPage()),
+        TabRoute.route[3]["path"]: pageConfiguration(MessagePage()),
+        TabRoute.route[4]["path"]: pageConfiguration(MyPage()),
       },
     ),
   ]);

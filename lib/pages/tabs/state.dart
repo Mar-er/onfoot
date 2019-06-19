@@ -11,28 +11,33 @@ import 'package:onfoot/pages/itinerary/page.dart';
 import 'package:onfoot/pages/message/page.dart';
 import 'package:onfoot/pages/my/page.dart';
 
-class HomeState implements GlobalBaseState<HomeState> {
-  //tab title
-//  List<String> titles = [];
+class TabsPageStateKeepAliveStf extends ComponentState<TabsState>
+    with SingleTickerProviderStateMixin {
+//  @override
+//  bool get wantKeepAlive => true;
+}
+
+class TabsState implements GlobalBaseState<TabsState> {
+  TabController tabController;
   // tab page
   List<Widget> pages = [];
-  // 当前选中tab
-  int selectedIndex = 0;
 
   @override
-  HomeState clone() {
-    return HomeState()
-    ..selectedIndex = selectedIndex;
+  TabsState clone() {
+    return TabsState()
+      ..tabController = tabController
+      ..pages = pages;
   }
 
   @override
   Color themeColor;
 }
 
-HomeState initState(Map<String, dynamic> args) {
-  HomeState state = HomeState();
-//  state.titles = TabRoute.route.map((v) => v["name"]);
-  state.pages..add(ActivityPage().buildPage(null))
+TabsState initState(Map<String, dynamic> args) {
+  TabsState state = TabsState();
+//  state.titles = TabRoute.route.map((v) => v["path"]);
+  state.pages
+    ..add(ActivityPage().buildPage(null))
     ..add(TrendsPage().buildPage(null))
     ..add(ItineraryPage().buildPage(null))
     ..add(MessagePage().buildPage(null))
