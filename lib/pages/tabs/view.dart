@@ -14,6 +14,12 @@ Widget buildView(TabsState state, Dispatch dispatch, ViewService viewService) {
 
   return Scaffold(
     backgroundColor: Colors.white,
+//    appBar: new AppBar(
+//      bottom: TabBar(
+//        tabs: tabs,
+//        controller: state.tabController,
+//      ),
+//    ),
     body: TabBarView(
       children: state.pages,
       controller: state.tabController,
@@ -22,6 +28,7 @@ Widget buildView(TabsState state, Dispatch dispatch, ViewService viewService) {
       child: TabBar(
         tabs: tabs,
         controller: state.tabController,
+        indicatorWeight: 0.1, // 指示器高度
       ),
     ),
   );

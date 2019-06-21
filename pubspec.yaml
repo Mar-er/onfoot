@@ -19,11 +19,41 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fish_redux: ^0.2.1
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  # 数据管理
+  fish_redux: ^0.2.1
+  # store持久化
+  redux_persist: ^0.8.2
+  redux_persist_flutter: ^0.8.1
+  # 获取文件路径
+  path_provider: ^0.5.0+1
+  #  网络库
+  dio: ^1.0.13
+  cookie_jar: ^0.0.7
+  # Dart 常用工具类库
+  common_utils: ^1.0.9
+  # json序列化
+  json_annotation: ^2.0.0
+  # 判断网络
+  connectivity: ^0.3.2
+  # webview
+  flutter_webview_plugin:
+    git:
+      url: https://github.com/flutterplugins/flutter_webview_plugin.git
+  # 加载本地html需要用到的插件
+  jaguar: ^2.4.4
+  jaguar_reflect: ^2.4.0
+  # 图片裁剪
+  image_cropper:
+    git:
+      url: https://github.com/flutterplugins/flutter_image_cropper.git
+  # 设置 Placeholder 从内存中加载资源，借助此插件
+  transparent_image: ^1.0.0
+  # 将从网络中请求到的图片缓存到本地
+  cached_network_image: ^0.8.0
+
 
 dev_dependencies:
   flutter_test:
