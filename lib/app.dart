@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fish_redux/fish_redux.dart';
 
-import 'package:onfoot/pages/tabs/tabs.dart';
+import 'package:onfoot/pages/tabs/page.dart';
 import 'package:onfoot/pages/activity/page.dart';
 import 'package:onfoot/pages/trends/page.dart';
 import 'package:onfoot/pages/itinerary/page.dart';
